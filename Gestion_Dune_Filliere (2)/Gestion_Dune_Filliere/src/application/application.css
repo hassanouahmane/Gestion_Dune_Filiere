@@ -1,0 +1,199 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/* 
+.imagebg{
+	-fx-background-image : url("/images/pic.jpg") ;
+	-fx-background-position : left ;
+	-fx-background-size : 328 600 ;
+}
+*/
+.btnlogin {
+    -fx-background-color: #0D6EFD;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.btn {
+ 	-fx-background-color: transparent;
+
+    
+}
+
+
+.Interface {
+	-fx-background-color : #015C92 	;
+	-fx-background-radius:16;
+	 
+	   
+} 
+.btnimport{
+	-fx-background-color : #02437E;
+	-fx-text-fill : #ffffff;
+	-fx-background-radius : 0 16 16 0;
+}
+
+.btntest{
+	-fx-background-color : #02437E;
+	-fx-text-fill : #ffffff;
+	-fx-background-radius:16;
+	-fx-border-color : #0C7FE9 ;
+	-fx-border-radius : 16 ; 
+	 
+}
+.btnAdd{
+	-fx-background-color : #0C7FE9;
+	-fx-text-fill : #ffffff;
+	-fx-background-radius:16;
+}
+
+.input{
+		  -fx-background-radius:10	;	
+}
+
+.active-button {
+    -fx-background-color: red; /* Bleu clair */
+    -fx-text-fill: white;         /* Texte blanc */
+}
+.hovered-button {
+    -fx-background-color: #27A5F9;
+}
+ 
+ 
+.btne{
+		-fx-background-color :#fefefe;
+	    -fx-text-fill : black;
+	    -fx-background-radius:10;
+	    -fx-border-color : #0C7FE9 ;
+	    -fx-border-radius : 10 ; 
+}
+
+
+
+
+.table-view .table-column {
+	-fx-alignment : center;
+}
+
+.table-view{
+	-fx-background-color : transparent ; 
+	-fx-border-color : black ;
+	-fx-border-radius : 8px ;
+	-fx-padding : 0.0px ;  
+	
+}
+
+.table-view .column-header-background {
+	-fx-background-color :#0C7FE9;
+	-fx-background-radius: 8px  8px 0px 0px;
+	-fx-padding : 3px ; 
+}
+.table-view .column-header, .filter{
+	-fx-background-color : transparent;
+	/*-fx-font-size : "arial"  ; */
+}
+
+.img{
+	-fx-background-image : url(../images/img.jpg);
+	
+	-fx-background-size : contain ; 
+	-fx-background-position : center ; 
+	-fx-background-repeat : no-repeat ;
+}
+.imglogo{
+	-fx-background-image : url(../images/ibnZohr.png); 
+	-fx-background-size : contain ; 
+	-fx-background-position : center ; 
+	-fx-background-repeat : no-repeat ;
+}
+
+/* TEXTFIELDS */
+.text-field {
+    -fx-background-color: white; /* Fond blanc */
+    -fx-border-color: #27A5F9; /* Bordure bleue */
+    -fx-border-radius: 10; /* Coins arrondis */
+    -fx-background-radius: 10; /* Fond arrondi */
+    -fx-padding: 5 10 5 10; /* Espacement interne */
+    -fx-font-size: 14px; /* Taille de police */
+    -fx-text-fill: #6F7B8A; /* Texte gris foncé */
+    -fx-cursor: text; /* Curseur pour le texte */
+}
+/* TABLE VIEW STYLE */
+.table-view {
+    -fx-background-color: transparent;
+}
+
+/* HEADER */
+.table-view .column-header {
+    -fx-background-color: transparent; /* Transparent */
+    -fx-size: 45.0px;
+    -fx-min-height: 45.0px;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 1.083333em;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 5.0 5.0 5.0 5.0;
+}
+
+.table-view .filler {
+    -fx-background-radius: 0.0 5.0 0.0 0.0;
+    -fx-background-color: transparent;
+    -fx-size: 45.0px;
+    -fx-min-height: 45.0px;
+}
+
+.table-view .column-header-background {
+    -fx-background-radius: 5.0 5.0 0.0 0.0;
+    -fx-background-color: #27A5F9; /* Bleu */
+}
+
+/* ROWS */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #D3D3D3; /* Bordure douce grise */
+    -fx-border-width: 0 0 1 0; /* Bordure inférieure */
+    -fx-padding: 10.0 0.0 10.0 0.0;
+    -fx-pref-height: 45.0px;
+}
+
+.table-row-cell:filled:even {
+    -fx-background-color: white; /* Couleur de fond blanche */
+}
+
+.table-row-cell:filled:odd {
+    -fx-background-color: #F6F7F8; /* Gris clair */
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #E8F5FE; /* Bleu clair au survol */
+}
+
+.table-view:row-selection .table-row-cell:selected {
+    -fx-background-color: #27A5F9; /* Bleu pour la sélection */
+    -fx-text-fill: white;
+}
+
+.table-view:row-selection .table-row-cell:selected .text {
+    -fx-fill: white; /* Texte en blanc */
+}
+
+.button-enseingant {
+    -fx-background-color: #27A5F9; /* Couleur bleu */
+    -fx-background-radius: 20; /* Bordures arrondies */
+    -fx-text-fill: white; /* Texte blanc */
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20; /* Espacement interne */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Ombre */
+    -fx-transition: 0.3s; /* Transition pour un effet lisse */
+}
+
+/* Hover effect for buttons */
+ 
+

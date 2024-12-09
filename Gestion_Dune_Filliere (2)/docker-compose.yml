@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Changez ce mot de passe pour des raisons de sécurité
+      MYSQL_DATABASE: hassan              # Nom de la base de données
+      MYSQL_USER: root                    # Utilisateur MySQL
+      MYSQL_PASSWORD: ""       # Mot de passe utilisateur
+    ports:
+      - "3306:3306"                       # Le port 3306 est exposé
+    volumes:
+      - db_data:/var/lib/mysql            # Volume pour persistance des données
+
+  javafx_app:
+    build:
+      context: .
+    container_name: javafx_app
+    ports:
+      - "8080:8080"                       # Port exposé pour l'application
+    depends_on:
+      - database
+    environment:
+      DATABASE_HOST: database             # L'hôte de la base de données (le service MySQL)
+      DATABASE_PORT: 3306                 # Port utilisé par MySQL
+      DATABASE_NAME: hassan               # Nom de la base de données
+      DATABASE_USER: root                 # Utilisateur MySQL
+      DATABASE_PASSWORD: root_password    # Mot de passe utilisateur
+    volumes:
+      - .:/app                            # Lier le dossier du projet dans le conteneur
+
+volumes:
+  db_data:

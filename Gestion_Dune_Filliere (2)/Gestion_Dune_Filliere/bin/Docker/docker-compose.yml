@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: 1111
+      MYSQL_DATABASE: gestion_etablissement
+    ports:
+      - "7089:7089"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin-container
+    environment:
+      PMA_HOST: db
+    ports:
+      - "8899:80"
+
+volumes:
+  mysql-data:

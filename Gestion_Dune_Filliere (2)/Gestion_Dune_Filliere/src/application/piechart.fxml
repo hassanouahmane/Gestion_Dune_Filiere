@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.PieChartController">
+
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="22.0" layoutY="5.0" prefHeight="236.0" prefWidth="729.0" spacing="20.0">
+            <!-- Other UI elements or customization for your PieChartContent -->
+            <PieChart fx:id="pieChart" prefHeight="236.0" prefWidth="729.0" title="Bilan de Réussite d'année" />
+        </VBox>
+    </children>
+</AnchorPane>

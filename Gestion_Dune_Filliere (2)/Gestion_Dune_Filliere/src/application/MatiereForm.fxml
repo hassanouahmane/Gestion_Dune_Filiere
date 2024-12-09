@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="541.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MatiereFormController">
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="20.0" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+        <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Modules" />
+        
+        <Label text="Nom de module" />
+        <TextField fx:id="moduletxtField" prefWidth="300.0" promptText="Nom de module" />
+        
+        <Label text="Nom de filiere" />
+        <ComboBox fx:id="filiereComboBox" prefWidth="300.0" promptText="Nom de filliere" />
+        
+        <Label text="Enseignant" />
+        <ComboBox fx:id="enseignantComboBox" prefWidth="300.0" promptText="Enseignant" />
+        
+        <Button fx:id="saveButton" onAction="#saveMatiere" prefWidth="100.0" text="Save" />
+    </VBox>
+</AnchorPane>

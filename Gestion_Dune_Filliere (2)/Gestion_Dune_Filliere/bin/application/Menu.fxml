@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1061.0" style="-fx-background-color: #fefcfa;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Menu_Controller">
+   <children>
+        
+       <fx:include source="TopNavigationBar.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+
+     
+      <!-- Contenu principal -->
+      <VBox fx:id="menu" spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+         <children>     
+            <!-- Ligne de statistiques -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  
+                  <!-- Panneau Enseignants -->
+                  <Pane prefHeight="115.0" prefWidth="285.0" style="-fx-background-color: #39A0A7; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="94.0" layoutY="36.0" text="Enseignants">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label>
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="36.0" layoutY="57.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="21.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../users-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="nmbr_ensg" layoutX="68.0" layoutY="36.0" prefHeight="36.0" prefWidth="40.0" text=" 10">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        
+                      </children>
+                  </Pane>
+                  <Pane prefHeight="115.0" prefWidth="285.0" style="-fx-background-color: #f36bab; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="94.0" layoutY="36.0" text="Etudiants">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label>
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="36.0" layoutY="57.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="21.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../users-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="nmbr_etu" layoutX="68.0" layoutY="36.0" prefHeight="36.0" prefWidth="40.0" text=" 10">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="115.0" prefWidth="285.0" style="-fx-background-color: #39A0A7; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="94.0" layoutY="36.0" style="-fx-background-color: ;" text="Matiere">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label>
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="36.0" layoutY="57.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="21.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../users-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="nmbr_matieres" layoutX="68.0" layoutY="36.0" prefHeight="36.0" prefWidth="40.0" text=" 10">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0">
+			   <children>
+			      <!-- Conteneur pour le graphique de bilan de réussite -->
+			      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="10.0">
+			         <children>
+			                  <fx:include source="piechart.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+			         </children>
+			      </VBox>
+			   </children>
+			</HBox>
+			<TableView fx:id="matiereTable" prefHeight="200.0" prefWidth="200.0">
+			    <columns>
+			        <TableColumn fx:id="nom" prefWidth="215.0" text="Nom matiere" />
+			        <TableColumn fx:id="prof" prefWidth="200.8000259399414" text="Proffesseure" />
+			        <TableColumn fx:id="Filliere" minWidth="0.0" prefWidth="107.20001220703125" text="Filliere" />
+			    </columns>
+			</TableView>
+         </children>
+      </VBox>
+   <VBox layoutY="66.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="734.0" prefWidth="250.0" style="-fx-background-color: #025c91;">
+  <children>
+   <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Label layoutX="60.0" layoutY="53.0" text="Gestion De Filliere" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="20.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+      <Button fx:id="Dash" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="enseignants" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Gestion Enseignant" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="etudiants" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Gestion Etudiants" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="matiere" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Gestion Matiere" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+            <Button fx:id="filliere" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Gestion Filliere" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+      <Button fx:id="profile" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Profile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="deconnection" alignment="TOP_LEFT" onAction="#Deconnexion" prefHeight="60.0" prefWidth="250.0" styleClass="btn" text="Deconnexion" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+  </children>
+</VBox>
+   </children>
+</AnchorPane>

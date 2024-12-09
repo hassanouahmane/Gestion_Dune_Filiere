@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1061.0" style="-fx-background-color: #fefcfa;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Menu_Controller">
+   <children>
+      <!-- Inclusion de la barre supérieure de navigation -->
+       
+       <!-- Inclusion du menu latéral -->
+       <!-- Contenu principal -->
+      <VBox  spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <!-- Ligne de statistiques -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <!-- Panneau Matières -->
+                  <Pane prefHeight="115.0" prefWidth="290.0" style="-fx-background-color: #39A0A7; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="70.0" layoutY="35.0" text="Matieres">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label text="10">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="34.0" layoutY="56.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />           
+                      </children>
+                  </Pane>
+                  
+                  <!-- Panneau Enseignants -->
+                  <Pane prefHeight="115.0" prefWidth="285.0" style="-fx-background-color: #f36bab; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="70.0" layoutY="35.0" text="Enseignants">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label text="10">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="36.0" layoutY="57.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="21.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../users-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                        
+                      </children>
+                  </Pane>
+
+                  <!-- Panneau Étudiants -->
+                  <Pane prefHeight="115.0" prefWidth="283.0" style="-fx-background-color: #39A0A7; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="70.0" layoutY="36.0" text="Etudiants">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <Label text="60">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Circle fill="WHITE" layoutX="34.0" layoutY="56.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                      </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0">
+			   <children>
+			      <!-- Conteneur pour le graphique de bilan de réussite -->
+			      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="10.0">
+			         <children>
+			                  <fx:include source="piechart.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+			         </children>
+			      </VBox>
+			   </children>
+			</HBox>
+			<TableView fx:id="matiereTable" prefHeight="200.0" prefWidth="200.0">
+			    <columns>
+                  <TableColumn fx:id="ide" minWidth="0.0" prefWidth="238.0" text="id" />
+			        <TableColumn fx:id="nom" prefWidth="215.0" text="Nom matiere" />
+			        <TableColumn fx:id="prof" prefWidth="200.8000259399414" text="Proffesseure" />
+			        <TableColumn fx:id="not" minWidth="0.0" prefWidth="107.20001220703125" text="Note" />
+			    </columns>
+			</TableView>
+
+            
+         </children>
+      </VBox>
+      
+   </children>
+</AnchorPane>
